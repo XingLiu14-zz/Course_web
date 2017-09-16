@@ -1,0 +1,61 @@
+body {
+	background-color: lightblue;
+}
+
+h2 {
+	color: navy;
+	margin-left: 40px;
+}
+
+h4 {
+	text-align: right;
+}
+
+table, th, td {
+	border: 2px solid black;
+}
+
+table {
+	width: 100%;
+}
+
+th, td {
+	padding: 10px;
+}
+
+.header0 {
+	background-color: #4CAF50;
+	color: white;
+	height: 50px;
+}
+
+.header1 {
+	background-color: #4B0082;
+	color: white;
+	width: 150px;
+}
+
+.update {
+	width: 180px;
+}
+
+.error {
+	display: none;
+	color: red;
+}
+
+.data {
+	width: 200px;
+}
+
+.notification, .data, .message{
+	border: none;
+}
+
+.msg {
+	display: none;
+	color: yellow;
+}
+
+
+

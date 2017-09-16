@@ -1,0 +1,18 @@
+var btn = document.getElementById("btn");
+var browserWidth = window.innerWidth || document.documentElement.clientWidth;
+var browserHeight = window.innerHeight || document.documentElement.clientHeight;
+var buttonWidth = btn.offsetWidth;
+var buttonHeight = btn.offsetHeight;
+ 
+function move() {
+	btn.style.left = Math.floor(Math.random()*(browserWidth-buttonWidth)) + "px";
+	btn.style.top = Math.floor(Math.random()*(browserHeight-buttonHeight)) + "px";
+}
+ 
+if(typeof addEventListener !== "undefined") {
+		btn.addEventListener("mouseover", move, false);
+	} else if (typeof attachEvent !== "undefined") {
+		btn.attachEvent("onmouseover", move);
+	} else {
+        btn.onmousover = move;
+    }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8">
+
+	<style>
+	#btn {
+		width:100px;
+        height:50px;
+        position:absolute;
+        top:100px;
+        left:100px;
+	}
+	</style>
+
+</head>
+
+<body>
+	
+<button id="btn">Click Me</button>
+
+
+
+</body>
+
+<script type="text/javascript" src="avoid.js"></script>
+
+</html>

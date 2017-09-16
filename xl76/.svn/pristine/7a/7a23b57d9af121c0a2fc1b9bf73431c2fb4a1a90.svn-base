@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>Ricebook - Your profile</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Xing Liu">
+	<script type="text/javascript" src="profile.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<h2>Shimada Hanzo's profile</h2>
+
+<h4><a href="main.html">Back to mainpage</a></h4>
+
+<table>
+
+	<tr>
+		<th class="header1">Display name:</th>
+		<td class="update">
+			<input type="text" id="updDisNam" placeholder="Change display name">
+		</td>
+		<td id="disNam" class="data">Hanzo</td>
+		<td class="message">
+			<span id="disNamMsg" class="msg"></span>
+		</td>
+	</tr>
+
+	<tr>
+		<th class="header1">Email address:</th>
+		<td class="update">
+			<input type="eml" placeholder="email@example.com" id="updEml" title="You should follow this format: email@example.com">
+		</td>
+		<td id="eml" class="data">hanzo@overwatch.ow</td>
+		<td class="message">
+			<span id="emlMsg" class="msg"></span>
+		</td>
+		<td class="notification">
+			<span id="emlErr" class="error">You should follow this format: email@example.com</span>
+		</td>
+	</tr>
+
+	<tr>
+		<th class="header1">Phone number:</th>
+		<td class="update">
+			<input type="text" id="updPhNum" placeholder="123-456-7890" pattern="\d\d\d-\d\d\d-\d\d\d\d" title="You should follow this format: 123-456-7890">
+		</td>
+		<td id="phNum" class="data">111-111-1111</td>
+		<td class="message">
+			<span id="phNumMsg" class="msg"></span>
+		</td>
+		<td class="notification">
+			<span id="phNumErr" class="error">You should follow this format: 123-456-7890</span>
+		</td>
+	</tr>
+
+		<th class="header1">Zipcode:</th>
+		<td class="update">
+			<input type="text" id="updZip" placeholder="Zipcode" title="You should follow this format: 12345">
+		</td>
+		<td id="zip" class="data">77030</td>
+		<td class="message">
+			<span id="zipMsg" class="msg"></span>
+		</td>
+		<td class="notification">
+			<span id="zipErr" class="error">You should follow this format: 12345</span>
+		</td>
+	</tr>
+
+	<tr>
+		<th class="header1">Password:</th>
+		<td class="update">
+			<input type="password" id="updPswd" placeholder="Update password">
+		</td>
+		<td id="pswd" class="data">hahaha</td>
+		<td class="message">
+			<span id="pswdMsg" class="msg"></span>
+		</td>
+	</tr>
+
+	<tr>
+		<th class="header1">Comfirm password:</th>
+		<td class="update">
+			<input type="password" id="updCfPswd" placeholder="Comfirm password">
+		</td>
+		<td id="cfPswd" class="data">hahaha</td>
+		<td class="notification">
+			<span id="cfPswdErr" class="error">Your passwords don't match!</span>
+		</td>
+	</tr>
+
+</table>
+
+<br><br>
+<input type="button" value="Update" onclick="return validation()">
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>You have signed up!</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Xing Liu">
+</head>
+
+<body style="background-color:orange;">
+
+<h2>This is your information</h2>
+
+
+<table style="width=100%">
+	<tr>
+		<th><b><u>Entry</u></b></th>
+		<th><b><u>Your info</u></b></th>
+	</tr>
+	<tr>
+		<th id="Accnam">Account name</th>
+		<th id="accnam"></th>
+	<tr>
+		<th id="Disnam">Display name</th>
+		<th id="disnam"></th>
+	</tr>
+	<tr>
+		<th id="Email">Email</th>
+		<th id="email"></th>
+	</tr>
+	<tr>
+		<th id="Phnum">Phone number</th>
+		<th id="phnum"></th>
+	</tr>
+	<tr>
+		<th id="Bday">Birthday</th>
+		<th id="bday"></th>
+	</tr>
+		<th id="Zipcode">Zipcode</th>
+		<th id="zipcode"></th>
+	</tr>
+	<tr>
+		<th id="Password">Password</th>
+		<th id="password"></th>
+	</tr>
+	<tr>
+		<th id="ComfirmPassword">Comfirm password</th>
+		<th id="comfirmPassword"></th>
+	</tr>
+	<tr>
+		<th id="Timestamp">Sign up date</th>
+		<th id="timestamp"></th>
+	</tr>
+
+<script type="text/javascript">
+	var information = location.search.substring(1).split('&');
+	for(var i = 0; i < 8; i++) {
+		var term = decodeURIComponent(information[i].split('=')[0]);
+		//console.log(term)
+		document.getElementById(term).innerHTML = decodeURIComponent(information[i].split('=')[1]);
+	}
+
+	var timeStamp = parseInt(decodeURIComponent(information[8].split('=')[1]));
+	var newDate = new Date();
+	newDate.setTime(timeStamp);
+	//date = new Date(timeStamp * 1000);
+	//date = (date.getMonth() + 1).toString() + "/" + date.getDate().toString() + "/" + date.getFullYear().toString() + " " + date.getHours().toString() + ":" + date.getMinutes().toString() + ":" + date.getSeconds().toString();
+	document.getElementById("timestamp").innerHTML = newDate.toUTCString();
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,104 @@
+function validation() {
+	var err = 0
+
+    valDisNam();
+
+    valEml(err);
+
+    valPhNum(err);
+
+    valZip(err);
+
+    valPswd(err);
+
+    if(err > 0) return false;
+    return true;
+}
+
+function valDisNam() {
+    var updDisNam = document.getElementById("updDisNam")
+    if(updDisNam.value) {
+        document.getElementById("disNam").innerHTML = updDisNam.value;
+        updDisNam.value = ""
+    }
+}
+
+function valEml(err) {
+    var updEml = document.getElementById("updEml")
+    if(updEml.value) {
+        var emlRegEx = /^\w+@[a-zA-Z0-9]+?\.[a-zA-Z]{2,3}$/
+        if(emlRegEx.test(updEml.value)) {
+            document.getElementById("eml").innerHTML = updEml.value
+            document.getElementById("emlErr").style.display = "none";
+            updEml.value = ""
+        }
+        else {
+            document.getElementById("emlErr").style.display = "block"
+            err++
+        }
+    }
+    else {
+        document.getElementById("emlErr").style.display = "none";
+    }
+}
+
+function valPhNum(err) {
+    var updPhNum = document.getElementById("updPhNum")
+    if(updPhNum.value) {
+        var phNumRegEx = /\d\d\d-\d\d\d-\d\d\d\d/
+        if(phNumRegEx.test(updPhNum.value)) {
+            document.getElementById("phNum").innerHTML = updPhNum.value
+            document.getElementById("phNumErr").style.display = "none";
+            updPhNum.value = ""
+        }
+        else {
+            document.getElementById("phNumErr").style.display = "block"
+            err++
+        }
+    }
+    else {
+        document.getElementById("phNumErr").style.display = "none";
+    }
+}
+
+function valZip(err) {
+    var updZip = document.getElementById("updZip")
+    if(updZip.value) {
+        var zipRegEx = /\d\d\d\d\d/
+        if(zipRegEx.test(updZip.value)) {
+            document.getElementById("zip").innerHTML = updZip.value
+            document.getElementById("zipErr").style.display = "none";
+            updZip.value = ""
+        }
+        else {
+            document.getElementById("zipErr").style.display = "block"
+            err++
+        }
+    }
+    else {
+        document.getElementById("zipErr").style.display = "none";
+    }
+}
+
+function valPswd(err) {
+    var updPswd = document.getElementById("updPswd")
+    var updCfPswd = document.getElementById("updCfPswd")
+    if(updPswd.value || updCfPswd.value) {
+        if(updPswd.value === updCfPswd.value) {
+            document.getElementById("pswd").innerHTML = updPswd.value
+            document.getElementById("cfPswd").innerHTML = updCfPswd.value
+            document.getElementById("cfPswdErr").style.display = "none"
+            updPswd.value = ""
+            updCfPswd.value = ""
+        }
+        else {
+            document.getElementById("cfPswdErr").style.display = "block"
+            err++
+        }
+    }
+    else {
+        document.getElementById("cfPswdErr").style.display = "none"
+    }
+}
+
+

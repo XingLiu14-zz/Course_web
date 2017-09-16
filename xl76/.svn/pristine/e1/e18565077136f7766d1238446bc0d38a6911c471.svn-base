@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>Ricebook</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Xing Liu">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<h2>Shimada Hanzo's feed</h2>
+
+<h4><a href="profile.html">View/update profile</a></h4>
+
+<table>
+	<tr>
+		<th class="header0">Post time</th>
+		<th class="header0">Text</th>
+		<th class="header0">Image</th>
+	</tr>
+	<tr>
+		<td>7:08PM Sun, 10 Sept. 2017 (GMT-5)</td>
+		<td>So glad to hangout with my brother Genji</td>
+		<td>
+			<img id="img0" src="https://static.comicvine.com/uploads/original/11130/111300705/5442943-hanzo-genji-683ea7e3177666b7ee75bb5223a0b7aa5bc5b97f93b222ae23ad0322b50458548a134c883934ae9bac37b6af7e999a11a1450c64cf49c018c6557f4fea802dc3_yz6ucq.png" height=136 width=177>
+			<br>
+			<input type="button" value="Stop" id="stop0">
+		</td>
+	</tr>
+	<tr>
+		<td>2:08PM Thu, 7 Sept. 2017 (GMT-5)</td>
+		<td>Morbi at feugiat massa. Donec accumsan eget turpis vel tincidunt. Nullam ipsum nisi, pretium vel nunc auctor, auctor sodales urna. Nunc in mi vel lorem interdum malesuada vel id magna. Quisque non metus et ex tristique varius. Proin ultricies lorem vitae suscipit laoreet. Mauris eu velit placerat, volutpat libero eu, tempor nibh.</td>
+		<td>
+			<img id="img1" src="https://www.cs.rice.edu/~keith/DuncanHall/Photos/bigfrontdoor.jpg" width=192 height=149>
+			<br>
+			<input type="button" value="Stop" id="stop1">
+		</td>
+	</tr>
+	<tr>
+		<td>11:39AM Thu, 4 Sept. 2017 (GMT-5)</td>
+		<td>Donec eleifend magna dui, eu porta tellus varius vel. Maecenas eget elementum eros, eget dictum felis. Vestibulum enim quam, consectetur ut nulla nec, efficitur feugiat dolor. Quisque ac dui varius, pretium velit sit amet, blandit libero. Nunc tellus risus, condimentum sed accumsan id, lacinia non diam. Donec eu maximus mauris. Aliquam nisl ex, gravida eu justo nec, ornare sagittis purus. Etiam sit amet condimentum nisi, eget rutrum purus. Integer posuere mattis felis id mollis. Ut ac volutpat erat. Nullam efficitur fringilla elit, in elementum urna vulputate sit amet. Maecenas id commodo neque. Praesent placerat ligula orci, sed facilisis odio laoreet ac. Sed purus sapien, tempor finibus consequat sed, consectetur pretium urna. Sed libero eros, ultricies non eros non, cursus feugiat nibh. Nunc faucibus mauris vel mollis fermentum.</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>3:24AM Tue, 28 Aug. 2017 (GMT-5)</td>
+		<td>I can't stop playing CS:GO, I think I might die suddenly.</td>
+		<td>
+			<img id="img2" src="http://media.steampowered.com/apps/csgo/blog/images/fb_image.png?v=5" width=200 height=100>
+			<br>
+			<input type="button" value="Stop" id="stop2">
+		</td>
+	</tr>
+	<tr>
+		<td>1:08PM Wed, 9 Aug. 2017 (GMT+9)</td>
+		<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et interdum augue. Etiam dignissim magna vitae vulputate semper. Nunc nec tristique dui, ac aliquam mi.</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>1:07PM Tue, 8 Aug. 2017 (GMT+9)</td>
+		<td>Proin efficitur efficitur leo, ac interdum libero porta sed. Pellentesque ultrices arcu ac faucibus hendrerit. Phasellus augue massa, lobortis non cursus vel, blandit ac risus. Suspendisse pellentesque ligula ac purus auctor vulputate. Maecenas facilisis, arcu et cursus faucibus, nunc justo ullamcorper tortor, in bibendum sapien enim vel purus. Nunc eget nibh facilisis, ultricies eros nec, dictum sem. Sed varius risus vitae turpis malesuada, at dictum nulla tristique. Quisque a nibh mi.</td>
+		<td></td>
+	</tr>
+
+</table>
+
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+
+</html>
