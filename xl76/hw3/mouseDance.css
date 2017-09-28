@@ -1,0 +1,51 @@
+#scoreBoard {
+    background-color: lightsteelblue;
+    text-align: center;
+}
+
+#background {
+    background-image: url("https://i.pinimg.com/736x/5f/90/be/5f90be57972c78d1fe68f20735b97b1d--computer-illustration-cyberpunk-character.jpg");
+    text-align: center;
+}
+
+.hallOfFame {
+    text-decoration: underline;
+    color: darkred;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+}
+
+.currStats {
+    color: coral;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#countDown {
+    color: springgreen;
+    font-size: 22px;
+}
+
+#level {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#rules {
+    font-size: 26px;
+    background-color: cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mode {
+    font-size: 20px;
+    color: blueviolet;
+}
+
+#rule {
+    font-size: 40px;
+}
+
+#stopGame {
+    display: none
+}

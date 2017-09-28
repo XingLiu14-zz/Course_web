@@ -1,1 +1,53 @@
 <!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>Mouse! Dance!</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Xing Liu">
+	<script type="text/javascript" src="mouseDance.js"></script>
+	<link rel="stylesheet" type="text/css" href="mouseDance.css">
+</head>
+
+<body>
+	<div id="scoreBoard">
+
+		<p id="buttons"> <!--The buttons are at the top so user can see it easily-->
+			<span id="level">=>CHOOSE YOUR LEVEL<=: </span><span id="difficulty"><button id="easyMode" onclick="gogogo(0)">I paly to relax (Easy)</button>
+			<button id="hardMode" onclick="gogogo(1)">Destroy me! (Hard)</button></span><span id="stopGame">Gotta go<button id="quit" onclick="quit()">Quit</button></span>
+		</p>
+
+		<p id="currScore">Your score: <span id="score" class="currStats">0</span>, Your combo: <span id="combo" class="currStats">0</span>
+			, Your highest combo: <span id="currHighestCombo" class="currStats">0</span>, Time left: <span id="countDown">64</span>
+			s.
+		</p>
+
+		<p id="highScoreEasy"><span class="mode">EASY MODE:</span> Highest score: <span id="highestScoreEasy" class="hallOfFame">0</span>
+			, Player: <span id="scorePlayerEasy" class="hallOfFame">N/A</span>
+			; Highest combo: <span id="highestComboEasy" class="hallOfFame">0</span>, Player: <span id="comboPlayerEasy" class="hallOfFame">N/A</span>.
+		</p>
+
+		<p id="highScoreHard"><span class="mode">HARD MODE:</span> Highest score: <span id="highestScoreHard" class="hallOfFame">0</span>
+			, Player: <span id="scorePlayerHard" class="hallOfFame">N/A</span>
+			; Highest combo: <span id="highestComboHard" class="hallOfFame">0</span>, Player: <span id="comboPlayerHard" class="hallOfFame">N/A</span>.
+		</p>
+
+	</div>
+
+	<div id="gameBoard">
+		<canvas width="1000" height="500" id="background"></canvas>
+	</div>
+
+	<div>
+		<p id="rules">
+			<span id="rule">GAME RULES:</span><br>
+			This is a dancing machine game, but it's for your mouse! You can click the whole column when the<br>
+			dropping rectangles overlap with the buttom rectangles, the more they overlap you will receive more points!<br>
+			To get extra points, you can try to click the buttom squares instead of some random place of the whole column<br>
+			Also, you should try to get more combos, when you click too early or too late, your combo will return to zero.<br>
+			Good luck, have fun!
+		</p>
+	</div>
+
+</body>
+</html>
