@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Ricebook - Your profile</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Xing Liu">
+</head>
+
+<body>
+
+<div class="ricebook">
+  Shimada Hanzo's profile
+</div>
+
+<input mat-button class="navBtn" type="submit" value="Mainpage" routerLink="/main">
+
+<!-- user's avatar -->
+<div style="width:20; float:right" border="0" cellpadding="0" cellspacing="0" class="avatar">
+  <img src={{profile.avatar}} height="150" width="150">
+  <br>
+  <input mat-button class="postBtn" type="file" value="Upload Profile Picture">
+</div>
+
+<!-- show and let user update their profile -->
+<form method="GET" [formGroup]="updateControl" novalidate class="container">
+
+  <div class="form-group-update">
+    <label for="disNameUpd">Display name:</label>
+    {{profile.name}}
+    <input #disNameU type="text" class="form-control-update" id="disNameUpd" placeholder="Update Display Name">
+    <br>
+  </div>
+  <br>
+
+  <div class="form-group-update">
+    <label for="emlUpd">Email address:</label>
+    {{profile.email}}
+    <input #emlU type="eml" class="form-control-update" placeholder="Update Email"
+           formControlName="emlControlUpd" id="emlUpd">
+    <br>
+    <mat-error *ngIf="emlControlUpd.hasError('pattern')" class="warn">
+      You should follow this format: email@example.com.
+    </mat-error>
+  </div>
+  <br>
+
+  <div class="form-group-update">
+    <label for="phoneUpd">Phone Number:</label>
+    {{profile.phone}}
+    <input #phoneNumU type="text" class="form-control-update" placeholder="Update Phone Number"
+           formControlName="phoneControlUpd" id="phoneUpd">
+    <br>
+    <mat-error *ngIf="phoneControlUpd.hasError('pattern')" class="warn">
+      You should follow this format: 123-456-7890.
+    </mat-error>
+  </div>
+  <br>
+
+  <div class="form-group-update">
+    <label for="phoneUpd">Birthday:</label>
+    {{profile.dob}}
+    <br>
+  </div>
+  <br>
+
+  <div class="form-group-update">
+    <label for="zipUpd">Zipcode:</label>
+    {{profile.zipcode}}
+    <input #zipU type="text" class="form-control-update" placeholder="Update Zipcode"
+           formControlName="zipControlUpd" id="zipUpd">
+    <br>
+    <mat-error *ngIf="zipControlUpd.hasError('pattern')" class="warn">
+      You should follow this format: 12345.
+    </mat-error>
+  </div>
+  <br>
+
+  <div>
+    <label for="pswdUpd">Update password:</label>
+    <input #pswdU type="password" class="form-control-update" placeholder="Update Your Password"
+           formControlName="pswdControlUpdate" id="pswdUpd">
+  </div>
+
+  <div>
+    <label for="pswdCUpd">Comfirm Update password:</label>
+    <input #pswdCU type="password" class="form-control-update" placeholder="Comform Your Password"
+           formControlName="pswdCControlUpdate" id="pswdCUpd">
+    <br>
+    <mat-error *ngIf="pswdU.value !== pswdCU.value" class="warn">
+      Your password should match!
+    </mat-error>
+  </div>
+</form>
+
+<br>
+<!-- one button control all the update -->
+<input type="button" value="Update"
+       [disabled]="!updateControl.valid || pswdU.value != pswdCU.value"
+       (click)="updateProfile(disNameU.value, emlU.value, phoneNumU.value, zipU.value);
+                disNameU.value=''; emlU.valu=''; phoneNumU.value=''; zipU.value=''; pswdU.value=''; pswdCU.value=''">
+</body>
+
+</html>

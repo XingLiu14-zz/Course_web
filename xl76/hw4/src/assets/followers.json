@@ -1,0 +1,7 @@
+{
+	"followers":[
+		{"name":"user1","headline":"headline1","avatar":"http://www.wikihow.com/images/f/f6/Make-Sticky-Rice-Using-Regular-Rice-Intro.jpg", "display": true},
+		{"name":"user2","headline":"headline2","avatar":"http://www.wikihow.com/images/f/f6/Make-Sticky-Rice-Using-Regular-Rice-Intro.jpg", "display": true},
+		{"name":"user3","headline":"headline3","avatar":"http://www.wikihow.com/images/f/f6/Make-Sticky-Rice-Using-Regular-Rice-Intro.jpg", "display": true}
+	]
+}

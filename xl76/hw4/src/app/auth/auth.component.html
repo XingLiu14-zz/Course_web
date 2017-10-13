@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Welcome to Ricebook!</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Xing Liu">
+</head>
+
+<body>
+
+<div class="ricebook">
+  This is Ricebook
+</div>
+
+
+<!-- Register -->
+<div id="signUp" style="float:left; margin-left:100px; margin-top:50px; display:inline" class="container">
+
+  <h2 style="text-align:center">
+    REGISTER
+  </h2>
+
+  <form method="GET" [formGroup]="fControl" novalidate>
+
+
+    <div class="form-group">
+      <label for="accName">Account name:</label>
+      <input type="text" class="form-control" id="accName" class="form-control" placeholder="your account name"
+             formControlName="accNameControl" required>
+      <br>
+      <mat-error *ngIf="accNameControl.hasError('pattern')" class="warn">
+        Account name can only be upper or lower case letters and numbers, but may not start with a number.
+      </mat-error>
+      <mat-error *ngIf="accNameControl.hasError('required')" class="warn">
+        Please input account number.
+      </mat-error>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="disName">Display name (optional):</label>
+      <input type="text" class="form-control" id="disName" placeholder="dispaly name">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="eml">Email address (email@example.com):</label>
+      <input type="eml" class="form-control" placeholder="email@example.com"
+             formControlName="emlControl" id="eml" required>
+      <br>
+      <mat-error *ngIf="emlControl.hasError('pattern')" class="warn">
+        You should follow this format: email@example.com.
+      </mat-error>
+      <mat-error *ngIf="emlControl.hasError('required')" class="warn">
+        Please input email.
+      </mat-error>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="phone">Phone number (123-456-7890):</label>
+      <input type="text" class="form-control" id="phone" placeholder="123-456-7890"
+             pattern="\d\d\d-\d\d\d-\d\d\d\d" formControlName="phoneControl" required>
+      <br>
+      <mat-error *ngIf="phoneControl.hasError('pattern')" class="warn">
+        You should follow this format: 123-456-7890.
+      </mat-error>
+      <mat-error *ngIf="phoneControl.hasError('required')" class="warn">
+        Please input phone number.
+      </mat-error>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="bday">Date of birth:</label>
+      <input type="date" class="form-control" id="bday" formControlName="bdayControl" required>
+      <br>
+      <mat-error *ngIf="bdayControl.hasError('required')" class="warn">
+        Please input your birthday.
+      </mat-error>
+      <mat-error *ngIf="!checkBday()" class="warn">
+        You are not old enough to use Ricebook.
+      </mat-error>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="zip">Zipcode:</label>
+      <input type="text" id="zip" placeholder="zipcode"
+             formControlName="zipControl" class="form-control" required>
+      <br>
+      <mat-error *ngIf="zipControl.hasError('pattern')" class="warn">
+        You should follow this format: 12345.
+      </mat-error>
+      <mat-error *ngIf="zipControl.hasError('required')" class="warn">
+        Please input zipcode.
+      </mat-error>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="pswd">Password:</label>
+      <input #pswd type="password" id="pswd" placeholder="password"
+             formControlName="pswdControl" class="form-control" required>
+      <br>
+      <mat-error *ngIf="pswdControl.hasError('required')" class="warn">
+        Please input your password.
+      </mat-error>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="pswdC">Comfirm your password:</label>
+      <input #pswdC type="password" id="pswdC" placeholder="comfirm password"
+             formControlName="pswdCControl" class="form-control" required>
+      <br>
+      <mat-error *ngIf="pswd.value !== pswdC.value" class="warn">
+        Your password should match!
+      </mat-error>
+    </div>
+    <br>
+
+    <p><input type="hidden" id="timestamp" name="timestamp"></p>
+
+    <input mat-button class="formBtn" color="warn" type="reset" value="Clear">
+    <input mat-button class="formBtn" type="submit" routerLink="/main"
+       [disabled]="!fControl.valid || pswd.value != pswdC.value || !checkBday()" value="Register">
+
+
+  </form>
+</div>
+
+
+<!-- Login -->
+<div id="login" style="float:right; margin-right:100px; margin-top:50px; display:inline" class="container">
+  <h2 style="text-align: center">
+    LOGIN
+  </h2>
+
+  <form method="GET" novalidate>
+
+    <div class="form-group">
+      <label for="accNameLogin">Account name:</label>
+      <input type="text" id="accNameLogin" class="form-control" placeholder="your account name"
+             [formControl]="accNameLoginControl" required>
+      <br>
+      <mat-error *ngIf="accNameLoginControl.hasError('required')" class="warn">
+        Please input your account name to login.
+      </mat-error>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="pswdLogin">Password:</label>
+      <input type="password" id="pswdLogin" class="form-control" placeholder="password"
+             [formControl]="pswdLoginControl" required>
+      <br>
+      <mat-error *ngIf="pswdLoginControl.hasError('required')" class="warn">
+        Please input your password to login.
+      </mat-error>
+    </div>
+
+    <input mat-button class="formBtn" type="submit" routerLink="/main"
+       [disabled]="!accNameLoginControl.valid || !pswdLoginControl.valid" value="Login">
+
+  </form>
+</div>
+
+
+</body>
+</html>
