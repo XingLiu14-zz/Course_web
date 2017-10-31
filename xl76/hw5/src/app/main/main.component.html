@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Ricebook</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Xing Liu">
+</head>
+
+<body>
+
+<div class="ricebook">
+  Shimada Hanzo's feed
+</div>
+
+<!-- navigation button -->
+<input mat-button class="navBtn" type="submit" value="View/update profile" routerLink="/profile">
+<input mat-button class="navBtn" type="submit" value="Logout" routerLink="/landing" (click)="logout()">
+
+<!-- user's avatar -->
+<div style="width:20; float:right" border="0" cellpadding="0" cellspacing="0" class="avatar">
+  <img src={{profile.avatar}} height="75" width="75">
+  <br>
+  {{profile.userName}}
+  <br>
+  {{profile.headline}}
+  <br>
+  <input #newheadline type="text" id="headline">
+  <br>
+  <input mat-button class="postBtn" type="submit" value="update headline"
+         (click)="updateHeadline(newheadline.value); newheadline.value=''">
+</div>
+
+<div style="text-align:center;">
+
+  <!-- for post search -->
+  <div id="search-box">
+    <input #searchtext type="text" id="search">
+    <input mat-button class="searchBtn" type="submit" (click)="searchText(searchtext.value)" value="Search">
+  </div>
+
+  <!-- show each post -->
+  <table border="0" cellpadding="0" cellspacing="0" style="width:83%; float:left" class="container">
+
+    <div id="allArticles">
+      <tr *ngFor="let post of articles" class="card">
+        <ng-container *ngIf="post.display">
+          <td>{{post.date}}</td>
+          <td>{{post.text}}</td>
+          <td>
+            <img src={{post.img}}
+                 height=150 width=150>
+          </td>
+          <td id="comment{{post.id}}">
+            {{post.comments}}
+          </td>
+          <td>
+            {{post.author}}
+          </td>
+          <td>
+            <input mat-button class="actionBtn" type="submit" value="Comment">
+            <input mat-button class="actionBtn" type="submit" value="Edit">
+            <input mat-button class="actionBtn" type="submit" value="Hide/Display Comments"
+                   (click)="hideOrDisplayComment(post.id)">
+          </td>
+        </ng-container>
+      </tr>
+    </div>
+
+    <div>
+      <input #newpost type="text" id="post">
+      <input mat-button class="postBtn" type="submit" value="Post" (click)="newPost(newpost.value); newpost.value=''">
+      <input mat-button class="postBtn" (click)="newpost.value=''" type="reset" value="Cancel">
+      <input mat-button class="postBtn" type="file" value="Upload">
+    </div>
+  </table>
+
+  <!-- show each follower -->
+  <table border="0" cellpadding="0" cellspacing="0" style="width:13%; float:right" class="container">
+    <tr>
+      <th>
+        Followers:
+      </th>
+    </tr>
+    <tr *ngFor="let follower of followers">
+      <td>
+        <img src={{follower.avatar}} height="50" width="50">
+        <br>
+        {{follower.userName}}
+        <br>
+        {{follower.headline}}
+        <br>
+        <input mat-button class="postBtn" (click)="unfollow(follower.userName)" type="submit" value="Unfollow">
+      </td>
+    </tr>
+    <br>
+    <div id="followFail" style="visibility: hidden; color: red">
+      temp
+    </div>
+    <input #newfollower type="text">
+    <input mat-button class="postBtn" type="submit" value="Add new follower"
+           (click)="newFollower(newfollower.value); newfollower.value=''">
+  </table>
+
+</div>
+
+
+</body>
+
+</html>

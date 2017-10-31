@@ -1,0 +1,26 @@
+.ricebook {
+  height: 100px;
+  background-color: lightblue;
+  text-align: center;
+  font-family: Arial;
+  font-size: 50px;
+}
+
+.container {
+  background-color: antiquewhite;
+}
+
+.avatar {
+  background-color: lightsteelblue;
+}
+
+.card {
+  background-color: thistle;
+  width: 75%;
+  margin-bottom: 1.5pt;
+  padding: 3pt;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  min-height: 3.5em;
+
+}
