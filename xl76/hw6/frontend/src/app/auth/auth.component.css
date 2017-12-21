@@ -1,0 +1,20 @@
+.ricebook {
+  height: 100px;
+  background-color: lightblue;
+  text-align: center;
+  font-family: Arial;
+  font-size: 50px;
+}
+
+
+.container {
+  background-color: antiquewhite;
+}
+
+.form-control {
+  background-color: floralwhite;
+}
+
+.warn {
+  color: red;
+}

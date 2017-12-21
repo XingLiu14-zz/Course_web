@@ -1,0 +1,14 @@
+What did you hope to learn but did not?:
+I hope I could learn some specific modern web design examples, like youtube or reddit.
+
+What did you really enjoy learning about?:
+The first half of this course is quite joyful, the course materials and assignments are organized.
+
+What worked well in the course? and how?:
+The topic coverage are good, I learned many knowledges.
+
+What did not work well in the course and how might it be improved?:
+Many of the inclass exercises are very confusing at the first glance, that gave me a lot pressure.
+
+What could I have done to help you more, presentation of materials, design of inclass exercises, goals of project - and be specific please!:
+Provide reading materials for each lectures, because I know someone read documentation about AngularJS then realized it's totally useless, so a readling suggestion will be very helpful.

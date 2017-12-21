@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<testsuite tests="12" name="My Protractor End to End Results" time="29.353000000000001" timestamp="2017-11-19T03:14:37">
+  <testcase className="untitled App should display welcome message" name="untitled App should display welcome message" time="2.302"/>
+  <testcase className="Auth login an user" name="Auth login an user" time="1.632"/>
+  <testcase className="Auth register an user" name="Auth register an user" time="5.931"/>
+  <testcase className="Main create a new article" name="Main create a new article" time="2.148"/>
+  <testcase className="Main should update headline" name="Main update headline" time="1.923"/>
+  <testcase className="Main count the follower" name="Main count the follower" time="1.685"/>
+  <testcase className="Main add follower" name="Main add follower" time="2.423"/>
+  <testcase className="Main delete follower" name="Main delete follower" time="1.845"/>
+  <testcase className="Main search articles" name="Main search articles" time="1.772"/>
+  <testcase className="Profile update email" name="Profile update email" time="2.892"/>
+  <testcase className="Profile update zip" name="Profile update zip" time="2.275"/>
+  <testcase className="Profile update password" name="Profile update password" time="2.525"/>
+  <system-out>beta</system-out>
+</testsuite>
